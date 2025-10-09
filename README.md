@@ -40,6 +40,7 @@ Data Engineers require knowledge in CLOUD Technologies like Azure and AWS, with 
 
 # The Analysis
 ## 2. How are in-demand skills trending for Data Analysts?
+
 Analyzing the skills of Data Analysts in the United States within a given year to ascertain if and how they vary monthly. To arrive at this, the data was filtered for only job postings of Data Analysts located in the United States. A count of each skill listed in the job postings was performed and presented with respect to each month using a pivot table. Through the implementation of a group-by function, with respect to the months, the number of job postings per month was also determined. This was used, through the div function, to calculate the likelihood of a job skill appearing in a job posting in a particular month.
 
 The results of this assessment will serve as a guide to any aspiring Data Analyst in the United States in terms of which skills to focus on-and which skills are still important. 
@@ -65,3 +66,55 @@ View my notebook with detailed steps here:
 
 
 ### Results
+![View graph of trending skills for Data Analysts](3_Project\Trending_Top_Data_Analyst_Skills_in_US.png)
+
+
+### Insights
+
+SQL is still the most sought-after skill for Data Analysts, as it facilitates querying of databases to pull data needed for analysis. An Indication that virtually all companies have a form of database.
+
+SQL and EXCEL are still highly regarded for a Data Analyst role in the United States, with SQL appearing in more than 45% (on average) of the job postings throughout the year, peaking at almost 51%. EXCEL appears in more than 35% (on average) of the monthly job postings.
+
+All the skills showed a dip in likelihood in November and a rise in December.
+
+Python seems to be needed as much as Tableau especially in the month of December
+
+# The Analysis
+## 3. How well do jobs and skills pay for Data Roles?
+
+### Salary Analysis for top roles.
+This section involves determining the distribution of average yearly salary for the top job roles, comparing how the pay for the senior cadres compare to the respective non-senior ones.
+
+Answering this first part involved obtaining the data for the jobs in a particular country, by filtering the main dataset for that country (in this case the United States). The most occurring data roles were determined by performing a value counts (in descending order) on the necessary column (job_title_short column) after which it was filtered for the top 6 data roles only.
+
+The order of the median salaries of the data roles was obtained using the dataset filtered for the top roles, performing a group-by on the job titles with a median aggregation on the average yearly salary field. This was then sorted in descending order.
+
+The outcome from this assessment gives an idea of the range of salaries earned by professionals in various cadre for the top roles of the jobs in a country; a good guide in negotiations and financial aspirations. In addition, if one is desirous of a career change, the result can also serve to guide such decisions.
+
+#### Visualize the Data
+
+    sns.boxplot(data = df_US_top6, x = 'salary_year_avg', y = 'job_title_short', order = job_order)
+
+    sns.set_theme(style = 'ticks')
+
+#### Results
+![Salary Distribution for Top Data Roles](3_Project\Salary_Distribution_Data_Jobs_in_United_States.png)*Salary Distribution for Top 6 Data Roles in the United States
+
+
+#### Insights
+All Senior cadres of job roles have a higher median salary than their Junior / Non-Senior roles. In-fact all Senior cadres earn more that their Junior roles.
+
+A Data Analyst who desires to earn more money should transition to either Data Engineering or Data Scientist roles.
+
+Data Scientist role has a much higher salary distribution than all the other roles within the salary range of 0k to 600k.
+
+It pays more to be a Data Scientist than a Data Engineer or Data Analyst
+
+### Highest Paid and In-Demand Skills
+
+
+
+
+
+
+
