@@ -2,17 +2,22 @@
 
 ## 1. What are the most demanded skills for the   top 3 most popular data roles?
 
-The objective here is to determine the skills that are in most demand for the top three (3) most popular data roles. The combination of each skill for each data role was counted before been filtered for the three most popular data roles. The popular data roles were obtained from counting how often they occur in the dataset used. This dataset was merged with that derived from counting the job postings for each of the top three roles of choice-to facilitate the derivation of the percentage occurrence of each skill. 
+The objective here is to determine the skills that are in most demand for the top three (3) most popular data roles. 
+
+The combination of each skill for each data role was counted before been filtered for the three most popular data roles. The popular data roles were obtained from counting how often they occur in the dataset used. 
+
+This dataset was LATER merged with that derived from counting the job postings for each of the top three roles of choice-to facilitate the derivation of the percentage occurrence of each skill. 
 
 Results from this assessment can aid in knowing what skills rank uppermost for any data role so that anyone aspiring for such roles will know what skills to concentrate on (and pay attention to).
 
 
 View my notebook with detailed steps here:
-[2_Skills_Demand.ipynb](3_Project\2_Skills_Demand.ipynb)
+[2_Skills_Demand.ipynb](3_Project/2_Skills_Demand.ipynb)
 
 
 ### Visualize Data
-    
+``` Python
+
     fig, ax = plt.subplots(len(job_titles), 1)
 
     sns.set_theme(style = 'ticks')
@@ -24,9 +29,9 @@ View my notebook with detailed steps here:
 
     plt.show()
 
-
+```
 ### Results
-![Visualize the top skills for Data Roles](3_Project\skills_requested_in_US_JobPosts.png)
+![Visualize the top skills for Data Roles](3_Project/skills_requested_in_US_JobPosts.png)
 
 
 ### Insights
@@ -34,23 +39,27 @@ SQL and PYTHON are needed in all three data roles. For a data Scientist, Python 
 
 TABLEAU seems to be the most mentioned and requested DATA VISUALIZATION SKILL for Data Analysts; 28% of all Data Analyst postings require TABLEAU.
 
-Data Engineers require knowledge in CLOUD Technologies like Azure and AWS, with AWS (at 44% mention) being highly sought after.
+Data Engineers require knowledge in CLOUD Technologies like Azure and AWS, with AWS (at 43% mention) being highly sought after.
 
 
 
 # The Analysis
 ## 2. How are in-demand skills trending for Data Analysts?
 
-Analyzing the skills of Data Analysts in the United States within a given year to ascertain if and how they vary monthly. To arrive at this, the data was filtered for only job postings of Data Analysts located in the United States. A count of each skill listed in the job postings was performed and presented with respect to each month using a pivot table. Through the implementation of a group-by function, with respect to the months, the number of job postings per month was also determined. This was used, through the div function, to calculate the likelihood of a job skill appearing in a job posting in a particular month.
+Analyzing the skills of Data Analysts in the United States within a given year to ascertain if and how they vary monthly. 
 
-The results of this assessment will serve as a guide to any aspiring Data Analyst in the United States in terms of which skills to focus on-and which skills are still important. 
+To arrive at this, the data was filtered for only job postings of Data Analysts located in a particular country (in this case the United States). A count of each skill listed in the job postings was performed and presented with respect to each month using a pivot table. 
+
+Through the implementation of a group-by function, with respect to the months, the number of job postings per month was also determined. This was used, through the div function, to calculate the likelihood of a job skill appearing in a job posting in a particular month.
+
+The results of this assessment will serve as a guide to any aspiring Data Analyst in the United States in terms of which skills to focus on-and which skills are still important. It also tells one whether a skill is still en-vague or not.
 
 View my notebook with detailed steps here:
-[3_Skills_Trend.ipynb](3_Project\3_Skills_Trend.ipynb)
+[3_Skills_Trend.ipynb](3_Project/3_Skills_Trend.ipynb)
 
 
 ### Visualize Data
-
+``` Python
 
     fig, ax = plt.subplots(len(job_titles), 1)
 
@@ -63,10 +72,10 @@ View my notebook with detailed steps here:
 
     plt.show()
 
-
+```
 
 ### Results
-![View graph of trending skills for Data Analysts](3_Project\Trending_Top_Data_Analyst_Skills_in_US.png)
+![View graph of trending skills for Data Analysts](3_Project/Trending_Top_Data_Analyst_Skills_in_US.png)
 
 
 ### Insights
@@ -75,7 +84,7 @@ SQL is still the most sought-after skill for Data Analysts, as it facilitates qu
 
 SQL and EXCEL are still highly regarded for a Data Analyst role in the United States, with SQL appearing in more than 45% (on average) of the job postings throughout the year, peaking at almost 51%. EXCEL appears in more than 35% (on average) of the monthly job postings.
 
-All the skills showed a dip in likelihood in November and a rise in December.
+All the skills showed a dip in likelihood in November and a rise in December. This could be dues to lower job postings resulting to decrease in recruitment budget. 
 
 Python seems to be needed as much as Tableau especially in the month of December
 
@@ -98,7 +107,7 @@ The outcome from this assessment gives an idea of the range of salaries earned b
     sns.set_theme(style = 'ticks')
 
 #### Results
-![Salary Distribution for Top Data Roles](3_Project\Salary_Distribution_Data_Jobs_in_United_States.png)*Salary Distribution for Top 6 Data Roles in the United States
+![Salary Distribution for Top Data Roles](3_Project/Salary_Distribution_Data_Jobs_in_United_States.png)*Salary Distribution for Top 6 Data Roles in the United States
 
 
 #### Insights
